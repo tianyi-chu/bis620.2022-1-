@@ -17,9 +17,12 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml)
+[![lint](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml)
+[![test-coverage](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml)
+[![codecov](https://codecov.io/gh/tianyi-chu/bis620.2022/branch/main/graph/badge.svg?token=E3EZ0R3IMQ)](https://codecov.io/gh/tianyi-chu/bis620.2022)
 <!-- badges: end -->
 
-The goal of bis620.2022 is to ...
+The goal of bis620.2022 is to analyze the accelerometry data ukb_accel by plotting time series plots from the data using the accel_plot() function from plot.R. The spectral_signature() function from spectral.R can be used to create spectral signatures. 
 
 ## Installation
 
@@ -32,25 +35,19 @@ devtools::install_github("tianyi-chu/bis620.2022")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to plot a time-series plot from the data:
 
-```{r example}
+```{r example1}
 library(bis620.2022)
+data(ukb_accel)
 ## basic example code
+accel_plot(ukb_accel[1:100, ])
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+And here is an example which shows you how to plot the spectral signatures:
+```{r example 2}
+data(ukb_accel)
+ukb_accel[1:100, ]|>
+  spectral_signature(take_log = TRUE)|>
+  accel_plot()
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
