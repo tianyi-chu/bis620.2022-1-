@@ -17,11 +17,6 @@ by plotting time series plots from the data using the accel_plot()
 function from plot.R. The spectral_signature() function from spectral.R
 can be used to create spectral signatures.
 
-[Coverage Page](https://codecov.io/gh/tianyi-chu/bis620.2022)
-
-[Lint
-Results](https://github.com/sidc2115/bis620.2022/actions/workflows/lint.yaml)
-
 ## Installation
 
 You can install the development version of bis620.2022 from
@@ -41,7 +36,7 @@ from the data:
 library(bis620.2022)
 data(ukb_accel)
 ## basic example code
-accel_plot(ukb_accel[1:100, ])
+accel_plot(ukb_accel[1:300, ])
 ```
 
 <img src="man/figures/README-example1-1.png" width="100%" />
@@ -50,7 +45,8 @@ And here is an example which shows you how to plot the spectral
 signatures:
 
 ``` r
-ukb_accel[1:100, ]|>
+data(ukb_accel)
+ukb_accel[1:300, ]|>
   spectral_signature(take_log = TRUE)|>
   accel_plot()
 ```
