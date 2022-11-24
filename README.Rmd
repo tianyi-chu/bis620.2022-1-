@@ -17,9 +17,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/tianyi-chu/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tianyi-chu/bis620.2022?branch=main)
 [![lint](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml)
 [![test-coverage](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml)
-[![codecov](https://codecov.io/gh/tianyi-chu/bis620.2022/branch/main/graph/badge.svg?token=E3EZ0R3IMQ)](https://codecov.io/gh/tianyi-chu/bis620.2022)
 <!-- badges: end -->
 
 The goal of bis620.2022 is to analyze the accelerometry data ukb_accel by plotting time series plots from the data using the accel_plot() function from plot.R. The spectral_signature() function from spectral.R can be used to create spectral signatures. 
