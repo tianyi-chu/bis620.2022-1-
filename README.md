@@ -1,36 +1,31 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # bis620.2022
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/tianyi-chu/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tianyi-chu/bis620.2022?branch=main)
+[![Codecov test
+coverage](https://codecov.io/gh/tianyi-chu/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tianyi-chu/bis620.2022?branch=main)
 [![lint](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml)
 [![test-coverage](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
-The goal of bis620.2022 is to analyze the accelerometry data ukb_accel by plotting time series plots from the data using the accel_plot() function from plot.R. The spectral_signature() function from spectral.R can be used to create spectral signatures. 
+The goal of bis620.2022 is to analyze the accelerometry data ukb_accel
+by plotting time series plots from the data using the accel_plot()
+function from plot.R. The spectral_signature() function from spectral.R
+can be used to create spectral signatures.
 
 [Coverage Page](https://codecov.io/gh/tianyi-chu/bis620.2022)
 
-[Lint Results](https://github.com/sidc2115/bis620.2022/actions/workflows/lint.yaml)
+[Lint
+Results](https://github.com/sidc2115/bis620.2022/actions/workflows/lint.yaml)
 
 ## Installation
 
-You can install the development version of bis620.2022 from [GitHub](https://github.com/) with:
+You can install the development version of bis620.2022 from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -39,18 +34,25 @@ devtools::install_github("tianyi-chu/bis620.2022")
 
 ## Example
 
-This is a basic example which shows you how to plot a time-series plot from the data:
+This is a basic example which shows you how to plot a time-series plot
+from the data:
 
-```{r example1}
+``` r
 library(bis620.2022)
 data(ukb_accel)
 ## basic example code
 accel_plot(ukb_accel[1:100, ])
 ```
 
-And here is an example which shows you how to plot the spectral signatures:
-```{r example 2}
+<img src="man/figures/README-example1-1.png" width="100%" />
+
+And here is an example which shows you how to plot the spectral
+signatures:
+
+``` r
 ukb_accel[1:100, ]|>
   spectral_signature(take_log = TRUE)|>
   accel_plot()
 ```
+
+<img src="man/figures/README-example 2-1.png" width="100%" />
