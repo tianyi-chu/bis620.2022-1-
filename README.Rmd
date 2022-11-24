@@ -22,6 +22,10 @@ knitr::opts_chunk$set(
 [![test-coverage](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/tianyi-chu/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
+[Coverage Page](https://codecov.io/gh/tianyi-chu/bis620.2022)
+
+[Lint Results](https://github.com/tianyi-chu/bis620.2022/actions/workflows/lint.yaml)
+
 The goal of bis620.2022 is to analyze the accelerometry data ukb_accel by plotting time series plots from the data using the accel_plot() function from plot.R. The spectral_signature() function from spectral.R can be used to create spectral signatures. 
 
 ## Installation
