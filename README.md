@@ -51,4 +51,4 @@ ukb_accel[1:300, ]|>
   accel_plot()
 ```
 
-<img src="man/figures/README-example 2-1.png" width="100%" />
+<img src="man/figures/README-example2-1.png" width="100%" />
