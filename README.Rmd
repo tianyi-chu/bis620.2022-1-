@@ -45,7 +45,7 @@ accel_plot(ukb_accel[1:300, ])
 ```
 
 And here is an example which shows you how to plot the spectral signatures:
-```{r example 2}
+```{r example2}
 data(ukb_accel)
 ukb_accel[1:300, ]|>
   spectral_signature(take_log = TRUE)|>
